@@ -1,0 +1,12 @@
+default:
+  target: dbt_transform
+  outputs:
+    dbt_transform:
+      type: bigquery
+      method: service-account
+      database: attngrace-423419
+      schema: dbt_transform_final_candidates
+      threads: 7
+      timeout_seconds: 300
+      priority: interactive
+      keyfile: /root/.dbt/gbq_creds.json
