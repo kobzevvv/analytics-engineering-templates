@@ -41,7 +41,11 @@ put gbq_creds.json to conf -> dbt ->
   - [dbt Commands Documentation](https://docs.getdbt.com/reference/dbt-commands)
 - Basic commands template:
 
-  - `dbt run -m test_model -t test`
+  - `./run_inside_docker.sh dbt run -m test_model -t test`
+        output for succssfull run example:
+            21:25:48  1 of 1 START sql view model test.test_model .................................... [RUN]
+            21:25:49  1 of 1 OK created sql view model test.test_model ............................... [CREATE VIEW (0 processed) in 1.54s]
+
     - Explanation: This command
       1. Compiles Jinja in the file to SQL code in the /target folder `test_model.sql` (you can find this compiled version in the VS Code target folder)
       2. Executes SQL code from the target folder
