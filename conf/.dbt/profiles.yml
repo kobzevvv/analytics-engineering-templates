@@ -4,8 +4,8 @@ default:
     test:
       type: bigquery
       method: service-account
-      database: qalearn
-      schema: test
+      database: elaborate-leaf-403112
+      schema: test_julian_fried
       threads: 7
       timeout_seconds: 300
       priority: interactive
@@ -14,7 +14,7 @@ default:
     dbt_transform:
       type: bigquery
       method: service-account
-      database: qalearn
+      database: elaborate-leaf-403112
       schema: dbt_transform_final_candidates
       threads: 7
       timeout_seconds: 300

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bitcoin_blockchain
+    database: bigquery-public-data
+    schema: bitcoin_blockchain
+    tables:
+      - name: transactions
